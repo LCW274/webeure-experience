@@ -7,14 +7,14 @@ const projects = [
   {
     title: "CarConnect",
     description: "Application de location de voitures moderne et intuitive",
-    image: "/placeholder.svg", // Vous pourrez remplacer par une vraie capture d'écran
+    image: "/lovable-uploads/9bcd42dd-14c3-4f0e-b0c2-ffcfe805cf46.png",
     link: "https://carconnectfr.netlify.app/",
     features: ["Interface moderne", "Système de réservation", "Design responsive"]
   },
   {
     title: "Estate Estimator Pro",
     description: "Plateforme d'estimation immobilière professionnelle",
-    image: "/placeholder.svg", // Vous pourrez remplacer par une vraie capture d'écran
+    image: "/lovable-uploads/2f1a5009-5162-41ea-b9e0-840c00113057.png",
     link: "https://preview--estate-estimator-pro.lovable.app/",
     features: ["Estimations précises", "Interface intuitive", "Analyses détaillées"]
   }
