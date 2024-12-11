@@ -14,6 +14,7 @@ import {
   Check,
 } from "lucide-react";
 import { PricingSection } from "@/components/pricing/PricingSection";
+import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
 
 const Index = () => {
   const { toast } = useToast();
@@ -137,6 +138,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <PortfolioSection />
 
       {/* Pricing Section */}
       <PricingSection />
