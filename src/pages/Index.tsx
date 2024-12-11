@@ -12,6 +12,7 @@ import {
   Smartphone,
   Users,
 } from "lucide-react";
+import { PricingSection } from "@/components/pricing/PricingSection";
 
 const Index = () => {
   const { toast } = useToast();
@@ -89,6 +90,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Why Choose Us Section */}
       <section className="py-24">
