@@ -15,6 +15,16 @@ import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
 import { ContactSection } from "@/components/contact/ContactSection";
 
 const Index = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -38,46 +48,14 @@ const Index = () => {
               Design élégant, solutions personnalisées et tarifs adaptés. Parce que
               chaque entreprise mérite un site web qui reflète son identité.
             </p>
-            <Button size="lg" className="rounded-full">
+            <Button 
+              size="lg" 
+              className="rounded-full"
+              onClick={scrollToServices}
+            >
               Découvrir nos services
             </Button>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 bg-secondary/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Nos Services
-            </h2>
-            <p className="text-muted-foreground">
-              Nous faisons bien plus que créer des sites web !
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="p-6 glass-card hover:shadow-lg transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -120,6 +98,42 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services-section" className="py-24 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Nos Services
+            </h2>
+            <p className="text-muted-foreground">
+              Nous faisons bien plus que créer des sites web !
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="p-6 glass-card hover:shadow-lg transition-all duration-300">
+                  <service.icon className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-muted-foreground">{service.description}</p>
                 </Card>
               </motion.div>
             ))}
