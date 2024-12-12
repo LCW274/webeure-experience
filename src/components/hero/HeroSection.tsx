@@ -18,7 +18,7 @@ export const HeroSection = ({ scrollToServices }: { scrollToServices: () => void
           <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
             Créez votre site web sur mesure avec{" "}
             <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              Webeure
+              Le Concept Webeure
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
