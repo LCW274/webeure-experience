@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 interface PricingCardProps {
   title: string;
@@ -18,6 +19,24 @@ export const PricingCard = ({
   features,
   isPopular = false,
 }: PricingCardProps) => {
+  const navigate = useNavigate();
+
+  const handleContact = () => {
+    switch (title) {
+      case "Plan de base":
+        navigate("/contact-basic");
+        break;
+      case "Plan standard":
+        navigate("/contact-standard");
+        break;
+      case "Plan Premium":
+        navigate("/contact-premium");
+        break;
+      default:
+        navigate("/contact-basic");
+    }
+  };
+
   return (
     <Card className={cn(
       "relative p-6 transition-all duration-300 hover:shadow-lg",
@@ -48,7 +67,11 @@ export const PricingCard = ({
         ))}
       </ul>
 
-      <Button className="w-full" variant={isPopular ? "default" : "outline"}>
+      <Button 
+        className="w-full" 
+        variant={isPopular ? "default" : "outline"}
+        onClick={handleContact}
+      >
         Contactez-moi pour votre projet
       </Button>
     </Card>
