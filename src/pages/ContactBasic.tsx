@@ -15,7 +15,7 @@ const ContactBasic = () => {
               <p>Evreux, Eure (27)</p>
             </div>
             <a 
-              href="https://optimise-ton-site-web.leconceptwebeure.fr/" 
+              href="https://preview--webeure-experience.lovable.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:text-primary/80 transition-colors"

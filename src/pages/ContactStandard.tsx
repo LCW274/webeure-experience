@@ -4,7 +4,7 @@ import { toast } from "@/components/ui/use-toast";
 
 const ContactStandard = () => {
   const handleShare = async () => {
-    const url = "https://optimise-ton-site-web.leconceptwebeure.fr/";
+    const url = "https://preview--webeure-experience.lovable.app/";
     
     try {
       if (navigator.share) {
@@ -39,7 +39,7 @@ const ContactStandard = () => {
             </div>
             <div className="flex items-center justify-center gap-2">
               <a 
-                href="https://optimise-ton-site-web.leconceptwebeure.fr/" 
+                href="https://preview--webeure-experience.lovable.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
