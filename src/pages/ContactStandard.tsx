@@ -37,15 +37,7 @@ const ContactStandard = () => {
               <MapPin className="w-5 h-5" />
               <p>Evreux, Eure (27)</p>
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <a 
-                href="https://preview--webeure-experience.lovable.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 transition-colors"
-              >
-                Découvrir notre hébergement Hostinger
-              </a>
+            <div className="flex items-center justify-center">
               <button
                 onClick={handleShare}
                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
